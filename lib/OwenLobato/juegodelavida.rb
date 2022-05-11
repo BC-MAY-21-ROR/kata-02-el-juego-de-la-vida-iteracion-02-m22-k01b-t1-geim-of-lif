@@ -1,8 +1,11 @@
 def ingreso
   puts "Elegir ancho del tablero"
-  $width = gets.chomp.to_i
-  puts "Elegir alto del tablero"
   $height = gets.chomp.to_i
+  
+  puts "Elegir alto del tablero"
+  $width = gets.chomp.to_i
+
+
 end
 
 def random
@@ -14,7 +17,10 @@ def create_matriz(a, b)
   new_matriz = Array.new(a) { Array.new(b) {  } }
   modify_matriz = Array.new(a) { Array.new(b) {  } }
 
+  
   print "Generacion 1 \n"
+  print "alto : #{$width}  , ancho : #{$height}\n\n"
+
   creating_matriz = Array.new(a) { Array.new(b) { random } }
   creating_matriz.each do |a|
     a.each do |b|
@@ -101,7 +107,10 @@ end
   # new_matriz.each do |a|
   #   print a
   #   print "\n"
+
+
   # end
+  print "alto : #{$width}  , ancho : #{$height}\n\n"
   modify_matriz.each do |a|
     print a.join(" ")
     print "\n"
