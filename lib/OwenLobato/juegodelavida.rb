@@ -1,3 +1,10 @@
+def ingreso
+  puts "Elegir ancho del tablero"
+  $width = gets.chomp.to_i
+  puts "Elegir alto del tablero"
+  $height = gets.chomp.to_i
+end
+
 def random
   rand(2)
   # indice == 0 ? '.' : '*'
@@ -101,5 +108,5 @@ end
   end
 end
 
-
-create_matriz(4, 4)
+ingreso
+create_matriz($width, $height)
